@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wyc.mapper.TestMybatis">
+    <select id="countGnqmcTotal" resultType="map">
+        SELECT qylx as 's', gnqmc as 'x', COUNT(1) AS 'y',SUM(zczb) AS 'z'
+        FROM adm_dsc_qyxq
+        WHERE qcrq is null
+        AND zdxrq is null
+        AND gnqmc is not NULL
+        AND qylx is not NULL
+        GROUP BY qylx, gnqmc
+        order by field(x,'中徐汇','漕创','华泾','徐家汇','衡复','枫林','南徐汇','徐汇滨江')
+    </select>
+
+</mapper>

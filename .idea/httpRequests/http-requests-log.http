@@ -1,0 +1,4 @@
+GET http://localhost:7004/rest/getUserById/{id}
+
+###
+

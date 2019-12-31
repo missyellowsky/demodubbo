@@ -1,0 +1,3 @@
+config\RabbitConfig.class
+domain\UserDO.class
+service\UserService.class
